@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="com.koushikdutta.droid2.bootstrap"
-      android:versionCode="1003" android:versionName="1.0.0.3">
+      package="com.koushikdutta.motobravo.bootstrap"
+      android:versionCode="0001" android:versionName="0.0.0.1">
     <application android:icon="@drawable/icon" android:label="@string/app_name" android:debuggable="true">
         <activity android:name=".Bootstrap"
                   android:label="@string/app_name"
