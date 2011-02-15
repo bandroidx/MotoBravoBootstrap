@@ -8,7 +8,7 @@ import android.util.Log;
 
 public class BootService extends Service {
 	
-	private static final String TAG = "D2B/BootService";
+	private static final String TAG = "BravoBS/BootService";
 
     @Override
     public void onStart(Intent intent, int startId) {

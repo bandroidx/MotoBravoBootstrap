@@ -21,7 +21,7 @@ import android.widget.Button;
 
 public class Bootstrap extends Activity {
 
-	private static final String TAG = "D2B/Bootstrap";
+	private static final String TAG = "Bravo/Bootstrap";
 	
     /** Called when the activity is first created. */
     @Override
@@ -115,7 +115,7 @@ public class Bootstrap extends Activity {
         });
     }
 
-    final static String LOGTAG = "Droid2Bootstrap";
+    final static String LOGTAG = "BravoBootstrap";
     final static String ZIP_FILTER = "assets";
     
     void unzipAssets() {

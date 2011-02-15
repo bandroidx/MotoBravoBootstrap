@@ -6,7 +6,7 @@ import java.io.IOException;
 import android.content.Context;
 
 public class Helper {
-	static final String LOGTAG = "Droid2Bootstrap";
+	static final String LOGTAG = "BravoBootstrap";
 
 	public final static String SCRIPT_NAME = "surunner.sh";
 

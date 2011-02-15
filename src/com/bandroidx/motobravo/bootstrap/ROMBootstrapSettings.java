@@ -8,9 +8,9 @@ import android.util.Log;
 import org.json.JSONObject;
 
 public class ROMBootstrapSettings {
-	private static final String TAG = "D2B/ROMBootstrapSettings";
+	private static final String TAG = "BravoBS/ROMBootstrapSettings";
 	
-	private static final File SETTINGS_FILE = new File("/system/etc/Droid2Bootstrap.cfg");
+	private static final File SETTINGS_FILE = new File("/system/etc/BravoBootstrap.cfg");
 	private static final String RESTART_ADB_KEY = "restart_adb";
 	private static final String INSTALL_HIJACK_KEY = "install_hijack";
 	private static final String INSTALL_RECOVERY_KEY = "install_recovery";
