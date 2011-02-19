@@ -62,7 +62,7 @@ public class Bootstrap extends Activity {
 //format the cdrom partition
                         command.append("mke2fs -m 0 -j -L cdrom /dev/block/mmcblk0p7 ; ");  
 //mount the cdrom partition
-                        command.append(busybox + " mount ext3 -o nosuid,nodev,noatime,nodiratime /dev/block/mmcblk0p7 /system ;");
+                        command.append(busybox + " mount ext3 -o nosuid,nodev,noatime,nodiratime /dev/block/mmcblk1p17 /cdrom ;");
 	                command.append(busybox + " cp " + updatebinary + " /cdrom/update-binary ; ");
 	                command.append(busybox + " cp " + recoveryzip + " /cdrom/update-recovery.zip ; ");
 	                command.append(busybox + " cp " + hijack + " /cdrom/hijack ; ");
