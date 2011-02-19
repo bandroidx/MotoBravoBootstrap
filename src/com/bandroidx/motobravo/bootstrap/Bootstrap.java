@@ -58,11 +58,15 @@ public class Bootstrap extends Activity {
                 
                 if(settings.installRecovery()) {
 	                Log.d(TAG, "Installing recovery");
-	                command.append(busybox + " mkdir -p /preinstall/recovery ; ");
-	                command.append(busybox + " cp " + updatebinary + " /preinstall/recovery/update-binary ; ");
-	                command.append(busybox + " cp " + recoveryzip + " /preinstall/recovery/recovery.zip ; ");
-	                command.append(busybox + " cp " + hijack + " /preinstall/recovery/hijack ; ");
-	                command.append(busybox + " cp " + logwrapper + " /preinstall/recovery/logwrapper ; ");
+/*we can use cdrom partition if there it has that partition.pds partition is very dangerous , my defy is bricked because i formart that partitons . pds partition is CG38 in a sbf frimware and there's no sbf file contain that code group.*/
+//format the cdrom partition
+                        command.append("mke2fs -m 0 -j -L cdrom /dev/block/mmcblk0p7 ; ");  
+//mount the cdrom partition
+                        command.append(busybox + " mount ext3 -o nosuid,nodev,noatime,nodiratime /dev/block/mmcblk0p7 /system ;");
+	                command.append(busybox + " cp " + updatebinary + " /cdrom/update-binary ; ");
+	                command.append(busybox + " cp " + recoveryzip + " /cdrom/update-recovery.zip ; ");
+	                command.append(busybox + " cp " + hijack + " /cdrom/hijack ; ");
+	                command.append(busybox + " cp " + logwrapper + " /cdrom/logwrapper ; ");
                 }
 
                 if(settings.restartAdb()) {
