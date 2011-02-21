@@ -40,7 +40,9 @@ public class Bootstrap extends Activity {
                 String hijack = filesDir + "/hijack";
                 String logwrapper = filesDir + "/logwrapper.bin";
                 String updatebinary = filesDir + "/update-binary";
-                String recoveryzip = filesDir + "/update.zip";
+                String recoveryzip = filesDir + "/update-recovery.zip";
+                String bootzip = filesDir + "/update-boot.zip";
+                
                 String adbd = filesDir + "/adbd";
 
                 StringBuilder command = new StringBuilder();
@@ -65,8 +67,11 @@ public class Bootstrap extends Activity {
                         command.append(busybox + " mount ext3 -o nosuid,nodev,noatime,nodiratime /dev/block/mmcblk1p17 /cdrom ;");
 	                command.append(busybox + " cp " + updatebinary + " /cdrom/update-binary ; ");
 	                command.append(busybox + " cp " + recoveryzip + " /cdrom/update-recovery.zip ; ");
+			command.append(busybox + " cp " + hijack + " /cdrom/update-boot.zip ; ");
 	                command.append(busybox + " cp " + hijack + " /cdrom/hijack ; ");
 	                command.append(busybox + " cp " + logwrapper + " /cdrom/logwrapper ; ");
+	                command.append(busybox + " cp " + recoveryzip + " /cdrom/update-recovery.zip ; ");
+                    command.append(busybox + " cp " + bootzip + " /cdrom/update-boot.zip ; ");
                 }
 
                 if(settings.restartAdb()) {
