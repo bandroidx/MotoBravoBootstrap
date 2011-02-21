@@ -1,0 +1,12 @@
+Recovery BootStrap for Motrola Bravo (KOBE) including CWM recovery
+
+Ported from Koush's CWM and Tenfar's Defy Recovery.
+
+Much thanks to Tenfar for all his help getting this working.
+
+This is a work in progress and doesnt currently work.  Do not try to compile
+this and use it on your phone, you will end up with a brick.  There is no SBF
+file out so its recommended you dont try to use this at all until I report back
+that its tested working and done.
+
+2/21/11: Initial Readme Added
