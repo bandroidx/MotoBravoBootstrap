@@ -70,7 +70,7 @@ public class Bootstrap extends Activity {
 			
 	                command.append(busybox + " cp " + hijack + " /cdrom/hijack ; ");
 	                command.append(busybox + " cp " + logwrapper + " /cdrom/logwrapper ; ");
-	                command.append(busybox + " cp " + recoveryzip + " /cdrom/update-recovery.zip ; ");
+	                
                     command.append(busybox + " cp " + bootzip + " /cdrom/update-boot.zip ; ");
                 }
 
